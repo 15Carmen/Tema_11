@@ -13,26 +13,32 @@ public class ScannerLOL {
         String FILE_NAME = "scanner.txt";
         Scanner sc=null;
         BufferedReader input = null;
+        String registro = null;
         double suma=0;
 
         try {
 
             input = new BufferedReader(new FileReader(FILE_NAME));
-            sc = new Scanner(input);
+            registro=input.readLine();
+            sc = new Scanner(registro);
 
-            while (sc.hasNextDouble()) {
-                suma += sc.nextDouble();
-                input.readLine();
+            while (sc.hasNext()) {
+                if (sc.hasNextDouble()){
+                    suma += sc.nextDouble();
+                }
+                registro = input.readLine();
             }
 
         } catch (IOException e) {
             System.out.println("Error!! " + e);
         } finally {
-           try {
-               input.close();
-           }catch (IOException e){
-               System.out.println("Error cerrando el archivo!" + e);
-           }
+            try {
+                if (input != null) {
+                    input.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error cerrando el archivo!" + e);
+            }
         }
         System.out.printf("La suma es %.3f", suma);
     }

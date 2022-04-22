@@ -12,25 +12,30 @@ public class ScannerEntero {
         String FILE_NAME = "scannerEntero.txt";
         Scanner sc = null;
         BufferedReader input = null;
+        String registro=null;
         int suma = 0;
         int contador = 0;
 
         try {
 
             input = new BufferedReader(new FileReader(FILE_NAME));
-            sc = new Scanner(input);
+            registro=input.readLine();
+            sc = new Scanner(registro);
 
-            while (sc.hasNextInt()) {
-                suma += sc.nextInt();
-                input.readLine();
-                contador++;
+            while (sc.hasNext()) {
+                if (sc.hasNextInt()){
+                    suma += sc.nextInt();
+                }
+                registro = input.readLine();
             }
 
         } catch (IOException e) {
             System.out.println("Error!! " + e);
         } finally {
             try {
-                input.close();
+                if (input != null) {
+                    input.close();
+                }
             } catch (IOException e) {
                 System.out.println("Error cerrando el archivo!" + e);
             }
