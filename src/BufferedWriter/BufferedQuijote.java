@@ -3,7 +3,7 @@ package BufferedWriter;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-
+/*
 public class BufferedQuijote {
     static final String FILE_NAME="quijote.txt";
     static String cadena=null;
@@ -105,3 +105,5 @@ public class BufferedQuijote {
         }
     }
 }
+ */
+
