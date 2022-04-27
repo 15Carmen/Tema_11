@@ -14,7 +14,7 @@ public class Ejercicio2 {
     public static void existeDirectorio(String nombreDirectorio){
 
         File fichero = new File(nombreDirectorio);
-        
+
 
     }
 
