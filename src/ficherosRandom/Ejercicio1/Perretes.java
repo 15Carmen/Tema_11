@@ -5,13 +5,13 @@ public class Perretes {
    //atributos
    int id;
    String nombre;
-   enum Raza{CORGI, POMERANIAN, PODENCO, PASTOR_ALEMAN, LABRADOR}
+   enum Raza{CORGUI, POMERANIAN, PODENCO, PASTOR_ALEMAN, LABRADOR}
    boolean conChapa;
    String color;
    int edad;
 
    //constructor
-   public Perretes(int id, String nombre, boolean conChapa, String color, int edad) {
+   public Perretes(int id, String nombre, boolean conChapa, String color, int edad, Raza corgui) {
       this.id = id;
       this.nombre = nombre;
       this.conChapa = conChapa;
@@ -21,44 +21,25 @@ public class Perretes {
 
    //getter y setter
 
-   public int getId() {
-      return id;
-   }
-
-   public void setId(int id) {
-      this.id = id;
-   }
-
    public String getNombre() {
-      return nombre;
-   }
-
-   public void setNombre(String nombre) {
-      this.nombre = nombre;
-   }
-
-   public boolean isConChapa() {
-      return conChapa;
-   }
-
-   public void setConChapa(boolean conChapa) {
-      this.conChapa = conChapa;
+      StringBuffer sb = new StringBuffer();
+      sb.append(nombre);
+      sb.setLength(20);
+      return sb.toString();
    }
 
    public String getColor() {
-      return color;
+      StringBuffer sb = new StringBuffer();
+      sb.append(color);
+      sb.setLength(20);
+      return sb.toString();
    }
 
-   public void setColor(String color) {
-      this.color = color;
-   }
-
-   public int getEdad() {
-      return edad;
-   }
-
-   public void setEdad(int edad) {
-      this.edad = edad;
+   public Raza getRaza(){
+      StringBuffer sb = new StringBuffer();
+      sb.append();
+      sb.setLength(20);
+      return sb.toString();
    }
 
    //Reescribimos el metodo toString y estructuramos lo que queremos que aparezca por pantalla
