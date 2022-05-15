@@ -1,6 +1,5 @@
-package ficherosRandom.Ejercicio2;
+package ficherosRandom.Ejercicio_1;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;

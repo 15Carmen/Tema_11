@@ -32,9 +32,9 @@ public class tablaEnteros {
             System.out.println("Error al crear el objeto");
         }
 
-        try (ObjectOutputStream escribir = new ObjectOutputStream(new FileOutputStream(FILE_NAME3))) {
+        try (ObjectOutputStream escribir = new ObjectOutputStream(new FileOutputStream(FILE_NAME2))) {
 
-            escribir.writeObject(tabla);
+            escribir.writeObject(listaEnteros);
 
         } catch (FileNotFoundException e) {
             System.out.println("Error al crear el fichero");
@@ -42,9 +42,9 @@ public class tablaEnteros {
             System.out.println("Error al crear el objeto");
         }
 
-        try (ObjectOutputStream escribir = new ObjectOutputStream(new FileOutputStream(FILE_NAME2))) {
+        try (ObjectOutputStream escribir = new ObjectOutputStream(new FileOutputStream(FILE_NAME3))) {
 
-            escribir.writeObject(listaEnteros);
+            escribir.writeObject(tabla);
 
         } catch (FileNotFoundException e) {
             System.out.println("Error al crear el fichero");
